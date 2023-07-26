@@ -1,0 +1,53 @@
+{
+    "name": "@buttercup/google-oauth2-client",
+    "version": "2.1.2",
+    "description": "Google OAuth2 authentication client",
+    "exports": "./dist/index.js",
+    "react-native": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "scripts": {
+      "build": "npm run clean && tsc",
+      "clean": "rimraf dist",
+      "prepublishOnly": "npm run build",
+      "test": "npm run build && npm run test:specs",
+      "test:specs": "nyc mocha ./test/specs/**/*.spec.js"
+    },
+    "files": [
+      "dist/**/*",
+      "CHANGELOG.md"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/buttercup/google-oauth2-client.git"
+    },
+    "keywords": [
+      "google",
+      "oauth2",
+      "client",
+      "auth",
+      "googleapis"
+    ],
+    "author": "Perry Mitchell <perry@perrymitchell.net>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/buttercup/google-oauth2-client/issues"
+    },
+    "homepage": "https://github.com/buttercup/google-oauth2-client#readme",
+    "devDependencies": {
+      "@types/node": "^18.11.18",
+      "chai": "^4.3.7",
+      "mocha": "^10.2.0",
+      "nyc": "^15.1.0",
+      "rimraf": "^4.1.2",
+      "sinon": "^15.0.1",
+      "typescript": "^4.9.5"
+    },
+    "dependencies": {
+      "@buttercup/fetch": "^0.1.1",
+      "eventemitter3": "^5.0.0",
+      "layerr": "^1.0.0",
+      "node-fetch": "^3.3.0",
+      "query-string": "^8.1.0"
+    }
+  }
